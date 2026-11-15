@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+
+  <meta
+    name="description"
+    content="Earth Lens — NASA Earth observation evidence for understanding environmental change in Kalimantan."
+  />
+
+  <meta name="theme-color" content="#06100c" />
+
+  <title>Earth Lens — NASA Earth Observation Intelligence</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Earth Lens home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+
+        <span class="brand-copy">
+          <strong>EARTH LENS</strong>
+          <small>NASA EARTH OBSERVATION</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#explorer">Explorer</a>
+        <a href="#insights">Insights</a>
+        <a href="#evidence">Evidence</a>
+      </nav>
+
+      <div class="nav-actions">
+        <span class="live-chip">
+          <i></i>
+          LIVE CASE STUDY
+        </span>
+
+        <button
+          id="themeToggle"
+          class="icon-button"
+          type="button"
+          aria-label="Toggle light and dark mode"
+          title="Toggle theme"
+        >
+          <span id="themeIcon">☾</span>
+        </button>
+
+        <button
+          id="languageToggle"
+          class="language-button"
+          type="button"
+          aria-label="Switch language"
+        >
+          EN
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+
+      <!-- =========================
+           HERO
+      ========================== -->
+
+      <section class="hero section">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            EARTH SYSTEM INTELLIGENCE
+          </div>
+
+          <h1>
+            See the signal.<br />
+            <span>Understand the story.</span>
+          </h1>
+
+          <p class="hero-description">
+            Earth Lens turns NASA Earth observation data into transparent,
+            evidence-backed environmental intelligence — helping users explore
+            what changed, where it changed, and what the evidence can actually support.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#explorer" class="button button-primary">
+              Explore Kalimantan
+              <span>→</span>
+            </a>
+
+            <a href="#insights" class="button button-ghost">
+              View evidence
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div>
+              <strong>2003–2024</strong>
+              <span>PRIMARY ANALYSIS</span>
+            </div>
+
+            <div>
+              <strong>4</strong>
+              <span>ENVIRONMENTAL VARIABLES</span>
+            </div>
+
+            <div>
+              <strong>63</strong>
+              <span>SPATIAL CELLS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-delay">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+
+          <div class="earth">
+            <div class="earth-glow"></div>
+
+            <div class="earth-surface">
+              <span class="land land-a"></span>
+              <span class="land land-b"></span>
+              <span class="land land-c"></span>
+              <span class="land land-d"></span>
+            </div>
+
+            <div class="earth-grid"></div>
+          </div>
+
+          <div class="orbit-node node-one"></div>
+          <div class="orbit-node node-two"></div>
+          <div class="orbit-node node-three"></div>
+
+          <div class="visual-label label-top">
+            <span>LAT</span>
+            <strong>−3.5° → 0°</strong>
+          </div>
+
+          <div class="visual-label label-bottom">
+            <span>LON</span>
+            <strong>111° → 115.5°</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           EXPLORER
+      ========================== -->
+
+      <section id="explorer" class="section explorer-section">
+
+        <div class="section-heading reveal">
+          <div>
+            <div class="eyebrow">
+              <span class="eyebrow-line"></span>
+              EXPLORER
+            </div>
+
+            <h2>Read the landscape.</h2>
+
+            <p>
+              Explore the environmental signals behind the Kalimantan case study.
+              The interface uses the project's actual statistical and spatial evidence.
+            </p>
+          </div>
+
+          <div class="period-badge">
+            <span>PRIMARY PERIOD</span>
+            <strong>2003 — 2024</strong>
+          </div>
+        </div>
+
+        <div class="explorer-grid">
+
+          <!-- Variable selector -->
+
+          <aside class="control-panel reveal">
+            <div class="panel-kicker">SELECT SIGNAL</div>
+
+            <div class="variable-list" id="variableList">
+
+              <button
+                class="variable-button active"
+                data-variable="burned_area_km2"
+                type="button"
+              >
+                <span class="variable-icon fire-icon">↗</span>
+
+                <span>
+                  <strong>Burned area</strong>
+                  <small>MODIS MCD64A1.061</small>
+                </span>
+
+                <span class="variable-arrow">→</span>
+              </button>
+
+              <button
+                class="variable-button"
+                data-variable="soil"
+                type="button"
+              >
+                <span class="variable-icon soil-icon">◌</span>
+
+                <span>
+                  <strong>Soil moisture</strong>
+                  <small>GLDAS Noah v2.1</small>
+                </span>
+
+                <span class="variable-arrow">→</span>
+              </button>
+
+              <button
+                class="variable-button"
+                data-variable="rain"
+                type="button"
+              >
+                <span class="variable-icon rain-icon">⌁</span>
+
+                <span>
+                  <strong>Precipitation</strong>
+                  <small>GPM IMERG Final V07</small>
+                </span>
+
+                <span class="variable-arrow">→</span>
+              </button>
+
+              <button
+                class="variable-button"
+                data-variable="temp"
+                type="button"
+              >
+                <span class="variable-icon temp-icon">°</span>
+
+                <span>
+                  <strong>Air temperature</strong>
+                  <small>MERRA-2 T2M</small>
+                </span>
+
+                <span class="variable-arrow">→</span>
+              </button>
+
+            </div>
+
+            <div class="control-note">
+              <span class="status-dot"></span>
+              Evidence-linked mode
+            </div>
+          </aside>
+
+          <!-- Map -->
+
+          <div class="map-panel reveal reveal-delay">
+
+            <div class="map-header">
+              <div>
+                <span class="panel-kicker">SPATIAL EVIDENCE</span>
+                <h3 id="mapTitle">Detected burned area</h3>
+              </div>
+
+              <div class="map-stat">
+                <span>CELLS</span>
+                <strong id="cellCount">63</strong>
+              </div>
+            </div>
+
+            <div
+              id="map"
+              class="map-container"
+              aria-label="Kalimantan spatial evidence map"
+            ></div>
+
+            <div class="map-legend">
+              <div>
+                <span class="legend-swatch by"></span>
+                BY significant
+              </div>
+
+              <div>
+                <span class="legend-swatch bh"></span>
+                BH only
+              </div>
+
+              <div>
+                <span class="legend-swatch nominal"></span>
+                Nominal
+              </div>
+
+              <div>
+                <span class="legend-swatch neutral"></span>
+                Inconclusive
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Signal cards -->
+
+        <div class="signal-grid reveal">
+
+          <article class="signal-card primary-signal">
+
+            <div class="signal-top">
+              <span class="panel-kicker">REGIONAL SIGNAL</span>
+
+              <span id="statusBadge" class="status-badge">
+                METHOD-SENSITIVE
+              </span>
+            </div>
+
+            <div class="signal-main">
+
+              <div>
+                <span class="signal-label" id="signalTitle">
+                  Detected burned area
+                </span>
+
+                <strong id="signalValue">−1,692</strong>
+
+                <span class="signal-unit" id="signalUnit">
+                  km² / decade
+                </span>
+              </div>
+
+              <div class="signal-direction" id="signalDirection">
+                ↓
+              </div>
+
+            </div>
+
+            <p id="signalSummary">
+              The regional burned-area trend is method-sensitive.
+            </p>
+
+          </article>
+
+          <article class="signal-card">
+
+            <span class="panel-kicker">DATA QUALITY</span>
+
+            <div class="quality-value">
+              <strong id="coverageValue">97.95%</strong>
+              <span>mean valid coverage</span>
+            </div>
+
+            <div class="quality-bar">
+              <span id="coverageBar"></span>
+            </div>
+
+            <div class="quality-meta">
+              <span id="lowCoverageMonths">8 months below 90%</span>
+              <span id="worstCoverage">Min: 46.60%</span>
+            </div>
+
+          </article>
+
+          <article class="signal-card">
+
+            <span class="panel-kicker">SEASONAL ASSOCIATION</span>
+
+            <div class="association">
+
+              <div class="association-row">
+                <span>Soil moisture</span>
+                <strong id="soilRho">ρ —</strong>
+              </div>
+
+              <div class="association-row">
+                <span>Rainfall</span>
+                <strong id="rainRho">ρ —</strong>
+              </div>
+
+              <div class="association-row">
+                <span>Temperature</span>
+                <strong id="tempRho">ρ —</strong>
+              </div>
+
+            </div>
+
+            <p>
+              Jul–Oct Spearman association. Association is not causation.
+            </p>
+
+          </article>
+
+        </div>
+      </section>
+
+      <!-- =========================
+           INSIGHTS
+      ========================== -->
+
+      <section id="insights" class="section insights-section">
+
+        <div class="section-heading reveal">
+          <div>
+            <div class="eyebrow">
+              <span class="eyebrow-line"></span>
+              EARTH LENS INSIGHTS
+            </div>
+
+            <h2>From signal to explanation.</h2>
+
+            <p>
+              Numbers become useful when users can understand what they mean,
+              what mechanisms are plausible, and where the evidence stops.
+            </p>
+          </div>
+        </div>
+
+        <div class="insight-layout">
+
+          <article class="insight-main reveal">
+
+            <div class="insight-header">
+
+              <div>
+                <span class="panel-kicker">CURRENT VARIABLE</span>
+                <h3 id="insightTitle">Detected burned area</h3>
+              </div>
+
+              <span class="source-chip" id="insightSource">
+                MODIS MCD64A1.061
+              </span>
+
+            </div>
+
+            <div class="insight-status-row">
+
+              <span
+                id="insightStatus"
+                class="large-status method-sensitive"
+              >
+                METHOD-SENSITIVE
+              </span>
+
+              <span id="insightPeriod">
+                2003–2024
+              </span>
+
+            </div>
+
+            <div class="insight-columns">
+
+              <div>
+                <span class="content-label">
+                  WHAT THE EVIDENCE SAYS
+                </span>
+
+                <p id="insightMechanism">
+                  Loading evidence interpretation…
+                </p>
+              </div>
+
+              <div>
+                <span class="content-label">
+                  IMPORTANT LIMIT
+                </span>
+
+                <p id="insightLimit">
+                  Loading evidence limitations…
+                </p>
+              </div>
+
+            </div>
+
+            <div class="association-box">
+
+              <span class="content-label">
+                SEASONAL EVIDENCE
+              </span>
+
+              <div
+                id="associationList"
+                class="association-list"
+              ></div>
+
+            </div>
+
+          </article>
+
+          <aside class="insight-side reveal reveal-delay">
+
+            <div class="mini-card">
+
+              <span class="panel-kicker">
+                STATISTICAL PROFILE
+              </span>
+
+              <div class="stat-row">
+                <span>HAC p-value</span>
+                <strong id="statHac">—</strong>
+              </div>
+
+              <div class="stat-row">
+                <span>BH q-value</span>
+                <strong id="statBh">—</strong>
+              </div>
+
+              <div class="stat-row">
+                <span>OLS p-value</span>
+                <strong id="statOls">—</strong>
+              </div>
+
+              <div class="stat-row">
+                <span>Kendall p</span>
+                <strong id="statKendall">—</strong>
+              </div>
+
+            </div>
+
+            <div class="mini-card">
+
+              <span class="panel-kicker">
+                REFERENCES
+              </span>
+
+              <div
+                id="referenceList"
+                class="reference-list"
+              ></div>
+
+            </div>
+
+          </aside>
+        </div>
+      </section>
+
+      <!-- =========================
+           EVIDENCE PASSPORT
+      ========================== -->
+
+      <section id="evidence" class="section evidence-section">
+
+        <div class="evidence-heading reveal">
+
+          <div>
+            <div class="eyebrow">
+              <span class="eyebrow-line"></span>
+              EVIDENCE PASSPORT
+            </div>
+
+            <h2>Know what you can trust.</h2>
+
+            <p>
+              Earth Lens exposes the statistical context behind every signal
+              instead of hiding uncertainty behind a polished visualization.
+            </p>
+          </div>
+
+          <div class="passport-seal">
+            <span>NASA</span>
+            <strong>EO</strong>
+            <small>
+              EVIDENCE<br />
+              PASSPORT
+            </small>
+          </div>
+
+        </div>
+
+        <div class="passport-grid reveal">
+
+          <div class="passport-card">
+            <span class="passport-number">01</span>
+
+            <h3>Coverage matters.</h3>
+
+            <p>
+              October 2015 reached only
+              <strong>46.60%</strong> valid land coverage.
+              A zero detected burned area under poor coverage is not evidence
+              that no fires occurred.
+            </p>
+
+            <div class="passport-tag warning">
+              LOW COVERAGE WARNING
+            </div>
+          </div>
+
+          <div class="passport-card">
+            <span class="passport-number">02</span>
+
+            <h3>Correlation isn't causation.</h3>
+
+            <p>
+              Seasonal soil moisture and rainfall show strong negative
+              associations with detected burned area. These relationships
+              identify patterns, not causal mechanisms.
+            </p>
+
+            <div class="passport-tag neutral">
+              ASSOCIATIONAL EVIDENCE
+            </div>
+          </div>
+
+          <div class="passport-card">
+            <span class="passport-number">03</span>
+
+            <h3>Methods can disagree.</h3>
+
+            <p>
+              The burned-area regional trend changes interpretation depending
+              on the statistical test. Earth Lens labels it
+              <strong>method-sensitive</strong> rather than overstating certainty.
+            </p>
+
+            <div class="passport-tag sensitive">
+              METHOD-SENSITIVE
+            </div>
+          </div>
+
+          <div class="passport-card">
+            <span class="passport-number">04</span>
+
+            <h3>Spatial patterns need context.</h3>
+
+            <p>
+              Spatial cells can show nominal or BH-adjusted significance,
+              but conservative BY correction finds no field-wide significant cells.
+            </p>
+
+            <div class="passport-tag scientific">
+              MULTIPLE TESTING
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================
+           GLOSSARY
+      ========================== -->
+
+      <section class="section glossary-section">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <div class="eyebrow">
+              <span class="eyebrow-line"></span>
+              GLOSSARY
+            </div>
+
+            <h2>Make the science readable.</h2>
+          </div>
+
+        </div>
+
+        <div
+          id="glossaryGrid"
+          class="glossary-grid reveal"
+        ></div>
+
+      </section>
+
+      <!-- =========================
+           CLOSING
+      ========================== -->
+
+      <section class="closing section reveal">
+
+        <div class="closing-inner">
+
+          <div class="closing-orb"></div>
+
+          <div class="closing-copy">
+
+            <div class="eyebrow">
+              <span class="eyebrow-line"></span>
+              EARTH LENS
+            </div>
+
+            <h2>
+              Better environmental intelligence
+              starts with better evidence.
+            </h2>
+
+            <p>
+              Built around NASA Earth observation data, reproducible analysis,
+              spatial evidence, and transparent uncertainty.
+            </p>
+
+            <a href="#top" class="button button-primary">
+              Back to top ↑
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+
+      <div class="footer-inner">
+
+        <div>
+          <strong>EARTH LENS</strong>
+
+          <span>
+            NASA Space Apps Challenge
+          </span>
+        </div>
+
+        <div class="footer-meta">
+          <span>NASA EARTH OBSERVATION</span>
+          <span>2003–2024</span>
+          <span>KALIMANTAN</span>
+        </div>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+  <!-- Leaflet -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  ></script>
+
+  <!-- Chart.js retained for future evidence visualizations -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"
+  ></script>
+
+  <!-- Evidence decision rules -->
+  <script src="./insights/evidence_rules.js"></script>
+
+  <!-- Application -->
+  <script src="./app.js"></script>
+
+</body>
+            </html>

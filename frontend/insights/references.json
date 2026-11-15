@@ -1,0 +1,26 @@
+{
+  "enso": {
+    "title": "El Niño Brought Drought and Fire to Indonesia (NASA Earth Observatory, 2016)",
+    "url": "https://science.nasa.gov/earth/earth-observatory/el-nino-brought-drought-and-fire-to-indonesia-87204/"
+  },
+  "fire": {
+    "title": "Seeing Through the Smoky Pall (NASA Earth Observatory, 2015)",
+    "url": "https://science.nasa.gov/earth/earth-observatory/seeing-through-the-smoky-pall-observations-from-a-grim-indonesian-fire-season/"
+  },
+  "modis": {
+    "title": "MCD64A1.061 product and QA documentation",
+    "url": "https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MCD64A1"
+  },
+  "gpm": {
+    "title": "NASA GPM IMERG",
+    "url": "https://gpm.nasa.gov/data/imerg"
+  },
+  "merra": {
+    "title": "NASA MERRA-2",
+    "url": "https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/"
+  },
+  "gldas": {
+    "title": "NASA GLDAS",
+    "url": "https://ldas.gsfc.nasa.gov/gldas"
+  }
+}

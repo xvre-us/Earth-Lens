@@ -1,0 +1,95 @@
+{
+  "rain": {
+    "title": {
+      "en": "Precipitation",
+      "es": "Precipitación"
+    },
+    "unit": {
+      "en": "mm of annual total / decade",
+      "es": "mm del total anual / década"
+    },
+    "source": "GPM IMERG Final V07",
+    "refs": [
+      "gpm",
+      "enso"
+    ],
+    "mechanism": {
+      "en": "Rain supplies water to soil and vegetation. A dry season may limit this supply. NASA documented an El Niño-related rainfall deficit in parts of Indonesia in 2015.",
+      "es": "La lluvia aporta agua al suelo y a la vegetación. Una temporada seca puede limitar ese aporte. NASA documentó un déficit de lluvias asociado con El Niño en partes de Indonesia en 2015."
+    },
+    "limit": {
+      "en": "An annual total can hide short droughts. We did not test ENSO attribution.",
+      "es": "Un total anual puede ocultar sequías breves. No evaluamos la atribución a ENSO."
+    }
+  },
+  "temp": {
+    "title": {
+      "en": "Air temperature",
+      "es": "Temperatura del aire"
+    },
+    "unit": {
+      "en": "°C / decade",
+      "es": "°C / década"
+    },
+    "source": "MERRA-2 T2M v5.12.4",
+    "refs": [
+      "merra",
+      "fire"
+    ],
+    "mechanism": {
+      "en": "Warmer air can increase atmospheric evaporative demand, depending on humidity and wind. This can favor drying, but does not by itself explain when fires occur.",
+      "es": "El aire más cálido puede aumentar la demanda evaporativa, según la humedad y el viento. Esto puede favorecer la sequedad, pero por sí solo no explica cuándo ocurren incendios."
+    },
+    "limit": {
+      "en": "MERRA-2 is a reanalysis. Our regional trend does not identify the cause of warming; seasonal temperature had little association with detected burned area.",
+      "es": "MERRA-2 es un reanálisis. Nuestra tendencia regional no identifica la causa del calentamiento; la temperatura estacional mostró poca asociación con la superficie quemada detectada."
+    }
+  },
+  "soil": {
+    "title": {
+      "en": "Surface soil moisture",
+      "es": "Humedad superficial del suelo"
+    },
+    "unit": {
+      "en": "kg/m² / decade",
+      "es": "kg/m² / década"
+    },
+    "source": "GLDAS Noah v2.1 (0–10 cm)",
+    "refs": [
+      "gldas",
+      "fire"
+    ],
+    "mechanism": {
+      "en": "Less rainfall may reduce soil water. Dry vegetation and organic material can become more combustible; drainage and ignition also matter in peat landscapes.",
+      "es": "Menos lluvia puede reducir el agua del suelo. La vegetación y materia orgánica secas pueden volverse más combustibles; el drenaje y la ignición también importan en turberas."
+    },
+    "limit": {
+      "en": "GLDAS is modeled and uses meteorological inputs. Surface moisture is not peat water-table depth.",
+      "es": "GLDAS es un modelo que usa entradas meteorológicas. La humedad superficial no mide la profundidad del nivel freático de las turberas."
+    }
+  },
+  "burned_area_km2": {
+    "title": {
+      "en": "Detected burned area",
+      "es": "Superficie quemada detectada"
+    },
+    "unit": {
+      "en": "km² of annual total / decade",
+      "es": "km² del total anual / década"
+    },
+    "source": "MODIS MCD64A1.061",
+    "refs": [
+      "modis",
+      "enso",
+      "fire"
+    ],
+    "mechanism": {
+      "en": "NASA describes how dry weather and land-clearing fires combined during Indonesia’s 2015 fire season; drained peat can sustain burning and produce smoke. These are plausible mechanisms, not causes established by our analysis.",
+      "es": "NASA describe cómo coincidieron el tiempo seco y las quemas para habilitar tierras en Indonesia en 2015; las turberas drenadas pueden mantener la combustión y producir humo. Son mecanismos plausibles, no causas demostradas por nuestro análisis."
+    },
+    "limit": {
+      "en": "Detected area is not a fire count or a unique annual footprint. Low coverage can hide burns. Ignition, drainage and land-use change were not measured.",
+      "es": "La superficie detectada no es un conteo de incendios ni una huella anual única. La baja cobertura puede ocultar quemas. No medimos ignición, drenaje ni cambio de uso del suelo."
+    }
+  }
+}
