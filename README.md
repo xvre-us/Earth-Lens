@@ -7,7 +7,7 @@ EarthLens is an open-source prototype developed for the NASA Space Apps Challeng
 🚀 Live Prototype
 
 EarthLens Dashboard:
-https://xvre-us.github.io/Earth-Lens-NASA-Space-App-Challenge/frontend/
+https://xvre-us.github.io/Earth-Lens/frontend/
 
 The current frontend brings together environmental exploration, visualization, scientific context, spatial analysis, and the Evidence Passport concept in one interface.
 
