@@ -1,0 +1,166 @@
+{
+  "region_bbox": [
+    111,
+    -3.5,
+    115.5,
+    0
+  ],
+  "period": "2003-2024",
+  "quality": {
+    "monthly_rows": 276,
+    "missing": {
+      "burned_area_km2": 0,
+      "valid_land_km2": 0,
+      "land_area_km2": 0,
+      "rain": 3,
+      "temp": 0,
+      "soil": 0,
+      "coverage": 0
+    },
+    "min_coverage": 0.46598839060261155,
+    "min_coverage_month": "2015-10-01",
+    "mean_coverage": 0.9795292584657652,
+    "fire_season_share": 0.9725099633545217,
+    "below_90_percent": 8
+  },
+  "trends": [
+    {
+      "variable": "rain",
+      "n": 22,
+      "slope_decade": 87.89023121795601,
+      "p_ols": 0.5621898505078181,
+      "p_hac": 0.2856755553632286,
+      "hac_ci_low": -79.234864041581,
+      "hac_ci_high": 255.0153264774943,
+      "sen_decade": 105.05372566666665,
+      "kendall_p": 0.5030535233842987,
+      "residual_lag1": -0.2994072452034899,
+      "q_hac_bh": 0.3809007404843048
+    },
+    {
+      "variable": "temp",
+      "n": 22,
+      "slope_decade": 0.2618799255128927,
+      "p_ols": 0.0006505480564621408,
+      "p_hac": 0.003160999914970406,
+      "hac_ci_low": 0.09899466992448099,
+      "hac_ci_high": 0.4247651811013014,
+      "sen_decade": 0.23642106060606238,
+      "kendall_p": 0.0013759591555648288,
+      "residual_lag1": 0.20961878741649034,
+      "q_hac_bh": 0.012643999659881625
+    },
+    {
+      "variable": "soil",
+      "n": 22,
+      "slope_decade": 0.13681301322228487,
+      "p_ols": 0.6703825706063415,
+      "p_hac": 0.457651618038398,
+      "hac_ci_low": -0.23999365636903205,
+      "hac_ci_high": 0.5136196828136098,
+      "sen_decade": 0.19892830555555463,
+      "kendall_p": 0.6157664135385533,
+      "residual_lag1": -0.1610603750828918,
+      "q_hac_bh": 0.457651618038398
+    },
+    {
+      "variable": "burned_area_km2",
+      "n": 22,
+      "slope_decade": -1692.0573655313042,
+      "p_ols": 0.11761267266957987,
+      "p_hac": 0.007173260081031717,
+      "hac_ci_low": -2870.966958591075,
+      "hac_ci_high": -513.1477724715331,
+      "sen_decade": -1126.6591166041612,
+      "kendall_p": 0.06215800261753044,
+      "residual_lag1": -0.4093168846531139,
+      "q_hac_bh": 0.014346520162063434
+    }
+  ],
+  "associations": [
+    {
+      "scope": "annual",
+      "variable": "rain",
+      "n": 22,
+      "rho": -0.8938452851496332,
+      "p_nominal": 2.1024662203543115e-08
+    },
+    {
+      "scope": "annual",
+      "variable": "temp",
+      "n": 22,
+      "rho": -0.21061547148503673,
+      "p_nominal": 0.3467960161098384
+    },
+    {
+      "scope": "annual",
+      "variable": "soil",
+      "n": 22,
+      "rho": -0.9040090344438172,
+      "p_nominal": 8.026046409607051e-09
+    },
+    {
+      "scope": "Jul-Oct",
+      "variable": "rain",
+      "n": 22,
+      "rho": -0.9345002823263695,
+      "p_nominal": 1.9983824182448904e-10
+    },
+    {
+      "scope": "Jul-Oct",
+      "variable": "temp",
+      "n": 22,
+      "rho": -0.026538678712591763,
+      "p_nominal": 0.9066765277008432
+    },
+    {
+      "scope": "Jul-Oct",
+      "variable": "soil",
+      "n": 22,
+      "rho": -0.9390175042348957,
+      "p_nominal": 9.967410203212735e-11
+    },
+    {
+      "scope": "Jul-Oct coverage >= 90% every month",
+      "variable": "rain",
+      "n": 20,
+      "rho": -0.9353383458646616,
+      "p_nominal": 1.4821142098475236e-09
+    },
+    {
+      "scope": "Jul-Oct coverage >= 90% every month",
+      "variable": "temp",
+      "n": 20,
+      "rho": 0.010526315789473682,
+      "p_nominal": 0.9648685868194994
+    },
+    {
+      "scope": "Jul-Oct coverage >= 90% every month",
+      "variable": "soil",
+      "n": 20,
+      "rho": -0.9428571428571428,
+      "p_nominal": 5.009327938313909e-10
+    },
+    {
+      "scope": "Jul-Oct coverage >= 80% every month",
+      "variable": "rain",
+      "n": 21,
+      "rho": -0.9441558441558441,
+      "p_nominal": 1.313876849790706e-10
+    },
+    {
+      "scope": "Jul-Oct coverage >= 80% every month",
+      "variable": "temp",
+      "n": 21,
+      "rho": -0.07792207792207792,
+      "p_nominal": 0.7370748924266822
+    },
+    {
+      "scope": "Jul-Oct coverage >= 80% every month",
+      "variable": "soil",
+      "n": 21,
+      "rho": -0.9506493506493506,
+      "p_nominal": 4.165215670086268e-11
+    }
+  ]
+}
