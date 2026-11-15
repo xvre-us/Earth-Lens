@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict');
+const r=require('./evidence_rules.js');
+const regional=require('./regional_evidence.json'), spatial=require('./spatial_evidence.json');
+const data={regional,spatial,explanations:require('./explanations.json'),references:require('./references.json')};
+assert.equal(r.getInsight(data,'temp').status,'increase');
+assert.equal(r.getInsight(data,'rain').status,'inconclusive');
+assert.equal(r.getInsight(data,'soil','es').status,'inconclusive');
+assert.equal(r.getInsight(data,'burned_area_km2').status,'method_sensitive');
+assert.equal(r.getInsight(data,'unknown'),null);
+assert.equal(r.coverageStatus(null),'unavailable');assert.equal(r.coverageStatus(0),'low_coverage');assert.equal(r.coverageStatus(.9),'passes_filter');
+assert.equal(r.spatialStatus(spatial[0]),'unavailable');
+assert.equal(spatial.filter(c=>r.spatialStatus(c)==='bh_only').length,2);
+assert.equal(spatial.filter(c=>r.spatialStatus(c)==='by_significant').length,0);
+assert.equal(r.trendStatus({slope_decade:1,p_hac:null,q_hac_bh:0,p_ols:0,kendall_p:0}),'unavailable');
+console.log('12 assertions passed');
