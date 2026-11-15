@@ -1,130 +1,46 @@
-# 🌍 Earth Lens
+# EarthLens backend: monthly time series + data-quality alerts
 
-Earth Lens is an open-source prototype developed for the NASA Space Apps Challenge, designed to make Earth observation data more accessible, interpretable, and actionable.
+`build_timeseries.py` turns the team's NASA monthly table
+(`science/data/monthly.csv`) into one JSON file the frontend can load:
+`backend/output/timeseries.json`. It does not change any frontend file.
 
-The project integrates real-world NASA datasets to help users explore environmental patterns and investigate relationships between climate variables and burned areas.
+```
+python backend/build_timeseries.py
+```
 
-🚀 Current Progress
+Standard library only (no installs). The script checks its own output
+(every series has one value per month, October 2015 is flagged) before writing.
 
-We have successfully downloaded and integrated four real-world datasets from NASA:
+## What is in `timeseries.json`
 
-- 🌧️ Precipitation
-- 🌡️ Air Temperature
-- 💧 Soil Moisture
-- 🔥 Burned Areas based on MODIS data
+| Key | What it holds |
+|---|---|
+| `months` | `"2003-01"` … `"2025-12"` (276 months) |
+| `series.burned_area` | MODIS MCD64A1 burned area, km² per month |
+| `series.soil_moisture` | GLDAS Noah 0–10 cm soil moisture, kg/m² |
+| `series.precipitation` | GPM IMERG Final precipitation, mm per month |
+| `series.temperature` | MERRA-2 2 m air temperature, °C |
+| `coverage` | share of land with valid MODIS observations (0–1) |
+| `climatology.<variable>` | average for Jan … Dec over all years (12 values) |
+| `quality_alerts` | every month with coverage below 90%, with a plain-language message |
+| `variables.<variable>` | title, unit and NASA source for each series |
 
-These datasets have been consolidated into a single CSV file, allowing us to begin integrating real observations directly into the Earth Lens prototype.
+Rules: a blank value in the source stays `null` (unknown), never 0. The 90%
+cut-off is the same one used in `science/analyze.py`.
 
-🔎 Preliminary Findings
+## Current results
 
-Our initial analysis has revealed several interesting patterns:
+- 276 months, 2003-01 to 2025-12.
+- 10 data-quality alerts. The worst is October 2015, with 46.6% coverage.
+- 3 unknown precipitation months at the end of 2025 (not yet available from GPM).
 
-- 97.25% of the detected burned areas were recorded between July and October.
-- On a seasonal basis, soil moisture and burned area show a strong negative Spearman correlation of -0.939.
-- Seasonal precipitation and burned area show a strong negative correlation of -0.935.
-- Annual temperature shows a significant warming trend. However, its direct association with annual burned area was not statistically significant.
+## Using it in the frontend (optional)
 
-These findings suggest that environmental variables may provide valuable contextual signals for understanding wildfire patterns, while also highlighting the importance of analyzing relationships at appropriate temporal scales.
+```js
+const ts = await fetch("../backend/output/timeseries.json").then(r => r.json());
+// ts.months -> x-axis labels, ts.series.burned_area -> y values
+// ts.quality_alerts -> list of { month, coverage, message }
+```
 
-⚠️ Data Quality & the "Evidence Passport"
-
-Our analysis also identified an important data-quality issue.
-
-The valid land-cover data recorded by MODIS dropped to approximately 46.6% in October 2015.
-
-Rather than treating data quality as an invisible technical issue, Earth Lens aims to make it part of the user experience.
-
-This leads to one of our proposed innovations:
-
-«Evidence Passport»
-
-The Evidence Passport will provide users with contextual information about the evidence behind an observation, including potential data-quality warnings.
-
-For example, when a dataset contains an unusual reduction in valid observations, Earth Lens could automatically flag the affected period instead of presenting the result without context.
-
-🛰️ NASA Data Integration
-
-Earth Lens is built around the idea of bringing multiple Earth observation datasets together rather than analyzing environmental variables in isolation.
-
-Our current data pipeline combines:
-
-Dataset| Variable| Purpose
-NASA| Precipitation| Examine rainfall patterns
-NASA| Air Temperature| Analyze temperature trends
-NASA| Soil Moisture| Assess surface moisture conditions
-NASA / MODIS| Burned Area| Identify fire-affected regions
-
-The consolidated dataset allows these variables to be explored together within a unified analytical workflow.
-
-🧠 Why Earth Lens?
-
-Earth observation data can be powerful, but it can also be difficult to interpret for users who are not specialists in Earth science, remote sensing, or climate science.
-
-Earth Lens aims to bridge that gap by transforming complex environmental datasets into evidence that is:
-
-Accessible → Interpretable → Contextualized → Actionable
-
-Instead of simply showing a map or a number, Earth Lens aims to help users understand:
-
-- What happened?
-- Where did it happen?
-- When did it happen?
-- What environmental conditions were associated with it?
-- How reliable is the underlying evidence?
-
-🛠️ Current Technology
-
-The project is currently being developed using:
-
-- NASA Earth observation datasets
-- Python
-- Pandas
-- NumPy
-- Statistical analysis
-- CSV-based data integration
-- GitHub
-
-Additional visualization and web technologies will be integrated as the prototype evolves.
-
-📊 Current Status
-
-Completed
-
-- [x] NASA dataset acquisition
-- [x] Precipitation dataset integration
-- [x] Air temperature dataset integration
-- [x] Soil moisture dataset integration
-- [x] MODIS burned-area dataset integration
-- [x] Initial statistical analysis
-- [x] Seasonal correlation analysis
-- [x] Data-quality assessment
-- [x] Consolidation into a unified CSV dataset
-
-In Development
-
-- [ ] Earth Lens interactive dashboard
-- [ ] NASA data visualization
-- [ ] Interactive environmental maps
-- [ ] Evidence Passport
-- [ ] Automated data-quality alerts
-- [ ] User-friendly interpretation of environmental patterns
-- [ ] Integration of additional Earth observation datasets
-
-🌱 Vision
-
-Earth Lens is not intended to replace scientific analysis.
-
-Instead, it aims to serve as a lens between raw Earth observation data and human understanding.
-
-By combining NASA's Earth observation resources with transparent data-quality indicators and accessible visualization, we hope to make environmental evidence easier to explore — for researchers, students, policymakers, and curious citizens alike.
-
-📜 License
-
-This project is licensed under the MIT License.
-
-See ""LICENSE"" (LICENSE) for the full license text.
-
----
-
-Built for NASA Space Apps Challenge 2026
-Earth Lens: Turning Earth observation data into understandable evidence.
+AI use: this script was written with help from an AI assistant (Claude) and
+checked by running it on the team's data.
