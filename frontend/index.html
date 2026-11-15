@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Earth Lens — NASA Earth Observation Explorer</title>
+
+  <meta
+    name="description"
+    content="Earth Lens turns NASA Earth observation data into understandable environmental evidence."
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+</head>
+
+<body>
+
+<header class="topbar">
+
+  <a class="brand" href="#">
+    <span class="brand-mark">◉</span>
+    <span>Earth Lens</span>
+  </a>
+
+  <nav>
+    <a href="#explorer">Explorer</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <span class="status">
+    <i></i>
+    Prototype
+  </span>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-copy">
+
+    <p class="eyebrow">
+      NASA EARTH OBSERVATION • OPEN SCIENCE
+    </p>
+
+    <h1>
+      See the Earth.<br>
+      <span>Understand the evidence.</span>
+    </h1>
+
+    <p class="hero-text">
+      Earth Lens connects environmental observations with simple
+      explanations, trends, and data-quality context—so Earth science
+      is easier to explore.
+    </p>
+
+    <div class="hero-actions">
+
+      <a class="button primary" href="#explorer">
+        Explore Earth data →
+      </a>
+
+      <a class="button secondary" href="#evidence">
+        View Evidence Passport
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-card">
+
+    <div class="orb"></div>
+
+    <div class="hero-card-content">
+
+      <span>Current case study</span>
+
+      <strong>Kalimantan, Indonesia</strong>
+
+      <small>
+        Burned area • soil moisture • precipitation • temperature
+      </small>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- EXPLORER -->
+
+<section id="explorer" class="section">
+
+  <div class="section-heading">
+
+    <div>
+
+      <p class="eyebrow">
+        ENVIRONMENTAL EXPLORER
+      </p>
+
+      <h2>
+        What is happening on the ground?
+      </h2>
+
+    </div>
+
+
+    <label class="select-wrap">
+
+      <span>Variable</span>
+
+      <select id="variableSelect">
+
+        <option value="burned_area">
+          Burned area
+        </option>
+
+        <option value="soil_moisture">
+          Soil moisture
+        </option>
+
+        <option value="precipitation">
+          Precipitation
+        </option>
+
+        <option value="temperature">
+          Air temperature
+        </option>
+
+      </select>
+
+    </label>
+
+  </div>
+
+
+  <div class="dashboard-grid">
+
+    <div class="map-panel">
+
+      <div id="map"></div>
+
+      <div class="map-overlay">
+
+        <strong id="mapTitle">
+          Burned area
+        </strong>
+
+        <span id="mapSubtitle">
+          Kalimantan case study • prototype layer
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <aside class="insight-panel">
+
+      <div class="metric">
+
+        <span>
+          Observed pattern
+        </span>
+
+        <strong id="metricValue">
+          97.25%
+        </strong>
+
+        <small id="metricLabel">
+          of detected burned area occurred Jul–Oct
+        </small>
+
+      </div>
+
+
+      <div class="metric">
+
+        <span>
+          Relationship
+        </span>
+
+        <strong id="correlationValue">
+          −0.939
+        </strong>
+
+        <small id="correlationLabel">
+          seasonal Spearman correlation with soil moisture
+        </small>
+
+      </div>
+
+
+      <div class="interpretation">
+
+        <span class="tag">
+          Interpretation
+        </span>
+
+        <p id="interpretationText">
+          Lower seasonal soil moisture is strongly associated
+          with higher detected burned area in this case study.
+        </p>
+
+      </div>
+
+
+      <div class="warning">
+
+        <strong>
+          Data-quality note
+        </strong>
+
+        <p>
+          Valid land-cover coverage dropped to about 46.6%
+          in October 2015. Treat conclusions involving that
+          period with caution.
+        </p>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+</section>
+
+
+<!-- CHART -->
+
+<section class="section chart-section">
+
+  <div class="section-heading compact">
+
+    <div>
+
+      <p class="eyebrow">
+        TEMPORAL SIGNAL
+      </p>
+
+      <h2>
+        How does the pattern change over time?
+      </h2>
+
+    </div>
+
+    <span class="source-badge">
+      NASA-derived case study • prototype data
+    </span>
+
+  </div>
+
+
+  <div class="chart-card">
+
+    <canvas id="trendChart"></canvas>
+
+  </div>
+
+</section>
+
+
+<!-- EVIDENCE PASSPORT -->
+
+<section id="evidence" class="section">
+
+  <div class="section-heading compact">
+
+    <div>
+
+      <p class="eyebrow">
+        EVIDENCE PASSPORT
+      </p>
+
+      <h2>
+        Don't hide uncertainty. Show it.
+      </h2>
+
+      <p class="section-description">
+        Earth Lens surfaces the context behind an observation
+        so users can distinguish a strong signal from a
+        data-quality limitation.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="evidence-grid">
+
+    <article class="evidence-card">
+
+      <span class="evidence-icon">
+        ✓
+      </span>
+
+      <div>
+
+        <strong>
+          Data provenance
+        </strong>
+
+        <p>
+          NASA Earth observation datasets are documented
+          alongside the analysis.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="evidence-card">
+
+      <span class="evidence-icon">
+        ↗
+      </span>
+
+      <div>
+
+        <strong>
+          Statistical context
+        </strong>
+
+        <p>
+          Relationships are presented with their analysis
+          method rather than as unexplained claims.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="evidence-card warning-card">
+
+      <span class="evidence-icon">
+        !
+      </span>
+
+      <div>
+
+        <strong>
+          Quality warning
+        </strong>
+
+        <p>
+          Known coverage limitations are exposed to users
+          instead of being silently discarded.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="section about">
+
+  <div>
+
+    <p class="eyebrow">
+      THE IDEA
+    </p>
+
+    <h2>
+      A lens between raw observations
+      and human decisions.
+    </h2>
+
+  </div>
+
+
+  <p>
+    Earth Lens is an open-source NASA Space Apps prototype
+    for students, researchers, policymakers, and citizens
+    who need environmental evidence without having to decode
+    raw datasets first.
+  </p>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <span>
+    Earth Lens • NASA Space Apps Challenge
+  </span>
+
+  <span>
+    Frontend prototype • Backend-ready architecture
+  </span>
+
+</footer>
+
+
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js">
+</script>
+
+<script src="app.js"></script>
+
+</body>
+  </html>
