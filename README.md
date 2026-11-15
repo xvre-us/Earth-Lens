@@ -1,130 +1,226 @@
-# 🌍 Earth Lens
+🌍 EarthLens
 
-Earth Lens is an open-source prototype developed for the NASA Space Apps Challenge, designed to make Earth observation data more accessible, interpretable, and actionable.
+EarthLens is an open-source prototype developed for the NASA Space Apps Challenge 2026. It turns NASA Earth observation data into an accessible, contextualized evidence-exploration experience for understanding environmental patterns and detected burned areas in a defined Kalimantan study region.
 
-The project integrates real-world NASA datasets to help users explore environmental patterns and investigate relationships between climate variables and burned areas.
+«Raw Earth observation → analysis → spatial context → evidence → human understanding»
 
-🚀 Current Progress
+🚀 Live Prototype
 
-We have successfully downloaded and integrated four real-world datasets from NASA:
+EarthLens Dashboard:
+https://xvre-us.github.io/Earth-Lens-NASA-Space-App-Challenge/frontend/
 
-- 🌧️ Precipitation
-- 🌡️ Air Temperature
-- 💧 Soil Moisture
-- 🔥 Burned Areas based on MODIS data
+The current frontend brings together environmental exploration, visualization, scientific context, spatial analysis, and the Evidence Passport concept in one interface.
 
-These datasets have been consolidated into a single CSV file, allowing us to begin integrating real observations directly into the Earth Lens prototype.
+🎯 What EarthLens Does
 
-🔎 Preliminary Findings
+EarthLens helps users investigate four connected questions:
 
-Our initial analysis has revealed several interesting patterns:
+- What happened? — Explore environmental variables and detected burned area.
+- Where did it happen? — Examine spatial patterns across the study grid.
+- When did it happen? — Explore monthly, seasonal, and annual patterns.
+- How reliable is the evidence? — Surface data-quality information and limitations instead of hiding them.
 
-- 97.25% of the detected burned areas were recorded between July and October.
-- On a seasonal basis, soil moisture and burned area show a strong negative Spearman correlation of -0.939.
-- Seasonal precipitation and burned area show a strong negative correlation of -0.935.
-- Annual temperature shows a significant warming trend. However, its direct association with annual burned area was not statistically significant.
+The platform is designed to make environmental evidence easier to interpret without presenting statistical associations as causal conclusions.
 
-These findings suggest that environmental variables may provide valuable contextual signals for understanding wildfire patterns, while also highlighting the importance of analyzing relationships at appropriate temporal scales.
+🛰️ NASA & Earth Observation Data
 
-⚠️ Data Quality & the "Evidence Passport"
+The scientific workflow combines multiple NASA-derived datasets:
 
-Our analysis also identified an important data-quality issue.
+Variable| Product| Unit
+Precipitation| GPM IMERG Final v07| mm/month
+Air temperature| MERRA-2 M2TMNXSLV| °C
+Soil moisture| GLDAS Noah 0–10 cm| kg/m²
+Burned area| MODIS MCD64A1.061| km²
 
-The valid land-cover data recorded by MODIS dropped to approximately 46.6% in October 2015.
+The primary study region is a rectangular Kalimantan study box:
 
-Rather than treating data quality as an invisible technical issue, Earth Lens aims to make it part of the user experience.
+111–115.5°E, 3.5°S–0°
 
-This leads to one of our proposed innovations:
+This is a research bounding box, not an administrative boundary.
 
-«Evidence Passport»
+The scientific archive covers January 2003–December 2025. Primary comparative analyses use complete years 2003–2024 because the rainfall record ends in September 2025.
 
-The Evidence Passport will provide users with contextual information about the evidence behind an observation, including potential data-quality warnings.
+🔬 Scientific Findings
 
-For example, when a dataset contains an unusual reduction in valid observations, Earth Lens could automatically flag the affected period instead of presenting the result without context.
+The current analysis identifies several important patterns:
 
-🛰️ NASA Data Integration
+- 97.25% of detected burned area occurred between July and October.
+- Seasonal soil moisture and detected burned area show a strong negative Spearman association (ρ = −0.939).
+- Seasonal precipitation and detected burned area show a strong negative Spearman association (ρ = −0.935).
+- Annual air temperature shows a warming trend of approximately +0.262 °C/decade.
+- The annual burned-area trend is method-sensitive and is not presented as a definitive decline.
 
-Earth Lens is built around the idea of bringing multiple Earth observation datasets together rather than analyzing environmental variables in isolation.
+These are observational statistical relationships. EarthLens does not claim that precipitation, temperature, or soil moisture directly causes the observed burned-area patterns.
 
-Our current data pipeline combines:
+🧭 Spatial Analysis
 
-Dataset| Variable| Purpose
-NASA| Precipitation| Examine rainfall patterns
-NASA| Air Temperature| Analyze temperature trends
-NASA| Soil Moisture| Assess surface moisture conditions
-NASA / MODIS| Burned Area| Identify fire-affected regions
+EarthLens also includes a spatial reliability workflow based on MODIS MCD64A1.061 monthly burned-area observations.
 
-The consolidated dataset allows these variables to be explored together within a unified analytical workflow.
+The spatial module evaluates:
 
-🧠 Why Earth Lens?
+- cell-level burned-area trends
+- coverage quality
+- robust trend statistics
+- multiple-testing adjustments
+- neighborhood slope/sign agreement
+- spatial evidence quality
 
-Earth observation data can be powerful, but it can also be difficult to interpret for users who are not specialists in Earth science, remote sensing, or climate science.
+The spatial analysis contains 63 grid cells across the study box, with cells below the selected minimum land-area threshold excluded from annual fitting.
 
-Earth Lens aims to bridge that gap by transforming complex environmental datasets into evidence that is:
+Spatial results are intentionally presented as descriptive evidence, not as proof of field-wide statistically confirmed trends.
+
+🛂 Evidence Passport
+
+One of EarthLens' core ideas is the Evidence Passport.
+
+Environmental results should not be presented without their evidence context. EarthLens therefore surfaces information such as:
+
+- data coverage
+- quality warnings
+- affected periods
+- statistical context
+- methodological limitations
+- source information
+
+A key example is October 2015, when valid MODIS land coverage fell to approximately 46.6%.
+
+A low-coverage observation should not be interpreted as evidence that fires did not occur. EarthLens treats this uncertainty as part of the result rather than hiding it.
+
+🧠 Why EarthLens?
+
+Earth observation systems produce enormous amounts of valuable information, but the results can be difficult to interpret outside specialist workflows.
+
+EarthLens is designed as a bridge between complex environmental datasets and human understanding:
 
 Accessible → Interpretable → Contextualized → Actionable
 
-Instead of simply showing a map or a number, Earth Lens aims to help users understand:
+The project does not attempt to replace scientific analysis. Instead, it provides an interface through which users can explore evidence, understand its context, and recognize its limitations.
 
-- What happened?
-- Where did it happen?
-- When did it happen?
-- What environmental conditions were associated with it?
-- How reliable is the underlying evidence?
+🏗️ Project Architecture
 
-🛠️ Current Technology
+The repository is organized into focused modules:
 
-The project is currently being developed using:
+Earth-Lens-NASA-Space-App-Challenge/
+├── frontend/    # Interactive EarthLens dashboard
+├── backend/     # Frontend-ready time-series and quality alerts
+├── science/     # Regional scientific analysis and evidence
+├── spatial/     # Spatial burned-area analysis and reliability
+├── insights/    # Evidence interpretation and explanation engine
+├── LICENSE
+└── README.md
+
+Frontend
+
+The frontend provides the user-facing EarthLens experience, including environmental exploration, visualization, scientific insights, spatial context, and Evidence Passport presentation.
+
+Backend
+
+The backend produces frontend-ready monthly time-series data and data-quality alerts from the team's consolidated NASA-derived dataset.
+
+Science
+
+The science module contains the reproducible regional analysis, statistical tests, source data, derived results, and machine-readable Evidence Passport inputs.
+
+Spatial
+
+The spatial module analyzes the gridded burned-area dataset and produces spatial evidence assets for integration with the dashboard.
+
+Insights
+
+The insights module provides deterministic, evidence-grounded interpretation, explanations, references, and glossary content without requiring an external AI service at runtime.
+
+📊 Data Quality & Methodological Transparency
+
+EarthLens deliberately distinguishes:
+
+- valid retrieval coverage from detection accuracy
+- association from causation
+- descriptive spatial trends from confirmed field-wide effects
+- modeled/reanalysis variables from direct ground observations
+- research bounding boxes from administrative boundaries
+
+No missing scientific values are silently converted into zero.
+
+The statistical workflow includes sensitivity checks using HAC errors, Kendall/Sen methods, coverage thresholds, and multiple-testing adjustments where appropriate. These methods are treated as analytical safeguards rather than guarantees of causal or definitive inference.
+
+⚠️ Limitations
+
+EarthLens is a prototype and has important limitations:
+
+- The study region is a rectangular research box, not an administrative region.
+- Burned-area observations represent detected burned area and can include repeated burns.
+- MODIS coverage is not equivalent to fire-detection accuracy.
+- GLDAS and MERRA-2 are modeled/reanalysis products.
+- Surface soil moisture is not equivalent to peat water-table depth.
+- Statistical associations do not establish causality.
+- Spatial neighboring cells should not be treated as independent evidence.
+- No wildfire attribution or operational fire forecasting is demonstrated.
+- The current prototype does not provide global dynamic environmental monitoring.
+- Vegetation NDVI/EVI integration is not part of the current scientific package.
+
+🛠️ Technology
+
+EarthLens uses a lightweight, reproducible stack including:
 
 - NASA Earth observation datasets
 - Python
 - Pandas
 - NumPy
 - Statistical analysis
-- CSV-based data integration
-- GitHub
+- JavaScript
+- HTML/CSS
+- JSON
+- GitHub / GitHub Pages
 
-Additional visualization and web technologies will be integrated as the prototype evolves.
+The core scientific and interpretation components do not require an external AI service to run.
 
-📊 Current Status
+🔁 Reproducibility
 
-Completed
+Scientific results can be regenerated from the repository's supplied data and analysis scripts.
 
-- [x] NASA dataset acquisition
-- [x] Precipitation dataset integration
-- [x] Air temperature dataset integration
-- [x] Soil moisture dataset integration
-- [x] MODIS burned-area dataset integration
-- [x] Initial statistical analysis
-- [x] Seasonal correlation analysis
-- [x] Data-quality assessment
-- [x] Consolidation into a unified CSV dataset
+For the regional science package:
 
-In Development
+cd science
+pip install -r requirements.txt
+python analyze.py
 
-- [ ] Earth Lens interactive dashboard
-- [ ] NASA data visualization
-- [ ] Interactive environmental maps
-- [ ] Evidence Passport
-- [ ] Automated data-quality alerts
-- [ ] User-friendly interpretation of environmental patterns
-- [ ] Integration of additional Earth observation datasets
+For the spatial package:
 
-🌱 Vision
+cd spatial
+pip install -r requirements.txt
+python spatial_analysis.py data/Kalimantan_Spatial_Burned_Area.csv --out results
+python make_assets.py
 
-Earth Lens is not intended to replace scientific analysis.
+For the backend time-series output:
 
-Instead, it aims to serve as a lens between raw Earth observation data and human understanding.
+python backend/build_timeseries.py
 
-By combining NASA's Earth observation resources with transparent data-quality indicators and accessible visualization, we hope to make environmental evidence easier to explore — for researchers, students, policymakers, and curious citizens alike.
+The repository contains the corresponding inputs, derived results, and documentation needed to understand the analytical workflow.
+
+📚 NASA Sources
+
+EarthLens uses NASA Earth observation and scientific data products including:
+
+- "NASA GPM IMERG" (https://gpm.nasa.gov/data/imerg)
+- "NASA MERRA-2" (https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/)
+- "NASA GLDAS" (https://ldas.gsfc.nasa.gov/gldas)
+- "NASA MODIS MCD64A1.061" (https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MCD64A1)
+- "NASA Giovanni" (https://giovanni.gsfc.nasa.gov/)
+
+🤖 AI Disclosure
+
+AI tools assisted the team with parts of code drafting, statistical analysis, documentation, and visual development.
+
+The reported numerical results and derived scientific assets are generated from the supplied datasets and analysis workflows. The team remains responsible for reviewing the implementation, validating conclusions, and following the NASA Space Apps Challenge submission requirements.
 
 📜 License
 
 This project is licensed under the MIT License.
 
-See ""LICENSE"" (LICENSE) for the full license text.
+See "LICENSE" (LICENSE) for the full license text.
 
 ---
 
-Built for NASA Space Apps Challenge 2026
-Earth Lens: Turning Earth observation data into understandable evidence.
+NASA Space Apps Challenge 2026
+
+EarthLens: Turning Earth observation data into understandable evidence.
