@@ -16,6 +16,3 @@ Example: `getInsight({regional,explanations,references}, 'temp', 'es')`. Support
 
 ## Interpretation safeguards
 Alpha 0.05; a regional BH-adjusted HAC result is classified as method-sensitive when conventional OLS or Kendall does not agree. These are descriptive decision rules, not new statistical tests. Coverage threshold 90% is a team-selected screening rule, not a NASA standard or accuracy guarantee. Spatial results distinguish nominal, BH and BY evidence and preserve missing statistics. Seasonal Spearman p-values are nominal; no causal claims, forecasts or independent neighbor evidence. The 2015 El Niño discussion is external NASA context, not an attribution result from EarthLens. No NDVI or global dynamic retrieval is implemented.
-
-## AI disclosure
-AI assistance was used for code drafting, explanations, translations and documentation. Numerical evidence is taken from the team's deterministic analyses of NASA-derived datasets. Review the content and disclose AI assistance in the final submission. The standalone interface is HTML/CSS, not an AI-generated image.
