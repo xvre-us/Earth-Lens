@@ -1,0 +1,2336 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.0,
+              -3.5
+            ],
+            [
+              111.5,
+              -3.5
+            ],
+            [
+              111.5,
+              -3.0
+            ],
+            [
+              111.0,
+              -3.0
+            ],
+            [
+              111.0,
+              -3.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R0_C0",
+        "row": 0,
+        "col": 0,
+        "longitude": 111.25,
+        "latitude": -3.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.5,
+              -3.5
+            ],
+            [
+              112.0,
+              -3.5
+            ],
+            [
+              112.0,
+              -3.0
+            ],
+            [
+              111.5,
+              -3.0
+            ],
+            [
+              111.5,
+              -3.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R0_C1",
+        "row": 0,
+        "col": 1,
+        "longitude": 111.75,
+        "latitude": -3.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.0,
+              -3.5
+            ],
+            [
+              112.5,
+              -3.5
+            ],
+            [
+              112.5,
+              -3.0
+            ],
+            [
+              112.0,
+              -3.0
+            ],
+            [
+              112.0,
+              -3.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R0_C2",
+        "row": 0,
+        "col": 2,
+        "longitude": 112.25,
+        "latitude": -3.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.5,
+              -3.5
+            ],
+            [
+              113.0,
+              -3.5
+            ],
+            [
+              113.0,
+              -3.0
+            ],
+            [
+              112.5,
+              -3.0
+            ],
+            [
+              112.5,
+              -3.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R0_C3",
+        "row": 0,
+        "col": 3,
+        "longitude": 112.75,
+        "latitude": -3.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.0,
+              -3.5
+            ],
+            [
+              113.5,
+              -3.5
+            ],
+            [
+              113.5,
+              -3.0
+            ],
+            [
+              113.0,
+              -3.0
+            ],
+            [
+              113.0,
+              -3.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R0_C4",
+        "row": 0,
+        "col": 4,
+        "longitude": 113.25,
+        "latitude": -3.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.5,
+              -3.5
+            ],
+            [
+              114.0,
+              -3.5
+            ],
+            [
+              114.0,
+              -3.0
+            ],
+            [
+              113.5,
+              -3.0
+            ],
+            [
+              113.5,
+              -3.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R0_C5",
+        "row": 0,
+        "col": 5,
+        "longitude": 113.75,
+        "latitude": -3.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.0,
+              -3.5
+            ],
+            [
+              114.5,
+              -3.5
+            ],
+            [
+              114.5,
+              -3.0
+            ],
+            [
+              114.0,
+              -3.0
+            ],
+            [
+              114.0,
+              -3.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R0_C6",
+        "row": 0,
+        "col": 6,
+        "longitude": 114.25,
+        "latitude": -3.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.5,
+              -3.5
+            ],
+            [
+              115.0,
+              -3.5
+            ],
+            [
+              115.0,
+              -3.0
+            ],
+            [
+              114.5,
+              -3.0
+            ],
+            [
+              114.5,
+              -3.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R0_C7",
+        "row": 0,
+        "col": 7,
+        "longitude": 114.75,
+        "latitude": -3.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.0,
+              -3.5
+            ],
+            [
+              115.5,
+              -3.5
+            ],
+            [
+              115.5,
+              -3.0
+            ],
+            [
+              115.0,
+              -3.0
+            ],
+            [
+              115.0,
+              -3.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R0_C8",
+        "row": 0,
+        "col": 8,
+        "longitude": 115.25,
+        "latitude": -3.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.0,
+              -3.0
+            ],
+            [
+              111.5,
+              -3.0
+            ],
+            [
+              111.5,
+              -2.5
+            ],
+            [
+              111.0,
+              -2.5
+            ],
+            [
+              111.0,
+              -3.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R1_C0",
+        "row": 1,
+        "col": 0,
+        "longitude": 111.25,
+        "latitude": -2.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.5,
+              -3.0
+            ],
+            [
+              112.0,
+              -3.0
+            ],
+            [
+              112.0,
+              -2.5
+            ],
+            [
+              111.5,
+              -2.5
+            ],
+            [
+              111.5,
+              -3.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R1_C1",
+        "row": 1,
+        "col": 1,
+        "longitude": 111.75,
+        "latitude": -2.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.0,
+              -3.0
+            ],
+            [
+              112.5,
+              -3.0
+            ],
+            [
+              112.5,
+              -2.5
+            ],
+            [
+              112.0,
+              -2.5
+            ],
+            [
+              112.0,
+              -3.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R1_C2",
+        "row": 1,
+        "col": 2,
+        "longitude": 112.25,
+        "latitude": -2.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.5,
+              -3.0
+            ],
+            [
+              113.0,
+              -3.0
+            ],
+            [
+              113.0,
+              -2.5
+            ],
+            [
+              112.5,
+              -2.5
+            ],
+            [
+              112.5,
+              -3.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R1_C3",
+        "row": 1,
+        "col": 3,
+        "longitude": 112.75,
+        "latitude": -2.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.0,
+              -3.0
+            ],
+            [
+              113.5,
+              -3.0
+            ],
+            [
+              113.5,
+              -2.5
+            ],
+            [
+              113.0,
+              -2.5
+            ],
+            [
+              113.0,
+              -3.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R1_C4",
+        "row": 1,
+        "col": 4,
+        "longitude": 113.25,
+        "latitude": -2.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.5,
+              -3.0
+            ],
+            [
+              114.0,
+              -3.0
+            ],
+            [
+              114.0,
+              -2.5
+            ],
+            [
+              113.5,
+              -2.5
+            ],
+            [
+              113.5,
+              -3.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R1_C5",
+        "row": 1,
+        "col": 5,
+        "longitude": 113.75,
+        "latitude": -2.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.0,
+              -3.0
+            ],
+            [
+              114.5,
+              -3.0
+            ],
+            [
+              114.5,
+              -2.5
+            ],
+            [
+              114.0,
+              -2.5
+            ],
+            [
+              114.0,
+              -3.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R1_C6",
+        "row": 1,
+        "col": 6,
+        "longitude": 114.25,
+        "latitude": -2.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.5,
+              -3.0
+            ],
+            [
+              115.0,
+              -3.0
+            ],
+            [
+              115.0,
+              -2.5
+            ],
+            [
+              114.5,
+              -2.5
+            ],
+            [
+              114.5,
+              -3.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R1_C7",
+        "row": 1,
+        "col": 7,
+        "longitude": 114.75,
+        "latitude": -2.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.0,
+              -3.0
+            ],
+            [
+              115.5,
+              -3.0
+            ],
+            [
+              115.5,
+              -2.5
+            ],
+            [
+              115.0,
+              -2.5
+            ],
+            [
+              115.0,
+              -3.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R1_C8",
+        "row": 1,
+        "col": 8,
+        "longitude": 115.25,
+        "latitude": -2.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.0,
+              -2.5
+            ],
+            [
+              111.5,
+              -2.5
+            ],
+            [
+              111.5,
+              -2.0
+            ],
+            [
+              111.0,
+              -2.0
+            ],
+            [
+              111.0,
+              -2.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R2_C0",
+        "row": 2,
+        "col": 0,
+        "longitude": 111.25,
+        "latitude": -2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.5,
+              -2.5
+            ],
+            [
+              112.0,
+              -2.5
+            ],
+            [
+              112.0,
+              -2.0
+            ],
+            [
+              111.5,
+              -2.0
+            ],
+            [
+              111.5,
+              -2.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R2_C1",
+        "row": 2,
+        "col": 1,
+        "longitude": 111.75,
+        "latitude": -2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.0,
+              -2.5
+            ],
+            [
+              112.5,
+              -2.5
+            ],
+            [
+              112.5,
+              -2.0
+            ],
+            [
+              112.0,
+              -2.0
+            ],
+            [
+              112.0,
+              -2.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R2_C2",
+        "row": 2,
+        "col": 2,
+        "longitude": 112.25,
+        "latitude": -2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.5,
+              -2.5
+            ],
+            [
+              113.0,
+              -2.5
+            ],
+            [
+              113.0,
+              -2.0
+            ],
+            [
+              112.5,
+              -2.0
+            ],
+            [
+              112.5,
+              -2.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R2_C3",
+        "row": 2,
+        "col": 3,
+        "longitude": 112.75,
+        "latitude": -2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.0,
+              -2.5
+            ],
+            [
+              113.5,
+              -2.5
+            ],
+            [
+              113.5,
+              -2.0
+            ],
+            [
+              113.0,
+              -2.0
+            ],
+            [
+              113.0,
+              -2.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R2_C4",
+        "row": 2,
+        "col": 4,
+        "longitude": 113.25,
+        "latitude": -2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.5,
+              -2.5
+            ],
+            [
+              114.0,
+              -2.5
+            ],
+            [
+              114.0,
+              -2.0
+            ],
+            [
+              113.5,
+              -2.0
+            ],
+            [
+              113.5,
+              -2.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R2_C5",
+        "row": 2,
+        "col": 5,
+        "longitude": 113.75,
+        "latitude": -2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.0,
+              -2.5
+            ],
+            [
+              114.5,
+              -2.5
+            ],
+            [
+              114.5,
+              -2.0
+            ],
+            [
+              114.0,
+              -2.0
+            ],
+            [
+              114.0,
+              -2.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R2_C6",
+        "row": 2,
+        "col": 6,
+        "longitude": 114.25,
+        "latitude": -2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.5,
+              -2.5
+            ],
+            [
+              115.0,
+              -2.5
+            ],
+            [
+              115.0,
+              -2.0
+            ],
+            [
+              114.5,
+              -2.0
+            ],
+            [
+              114.5,
+              -2.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R2_C7",
+        "row": 2,
+        "col": 7,
+        "longitude": 114.75,
+        "latitude": -2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.0,
+              -2.5
+            ],
+            [
+              115.5,
+              -2.5
+            ],
+            [
+              115.5,
+              -2.0
+            ],
+            [
+              115.0,
+              -2.0
+            ],
+            [
+              115.0,
+              -2.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R2_C8",
+        "row": 2,
+        "col": 8,
+        "longitude": 115.25,
+        "latitude": -2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.0,
+              -2.0
+            ],
+            [
+              111.5,
+              -2.0
+            ],
+            [
+              111.5,
+              -1.5
+            ],
+            [
+              111.0,
+              -1.5
+            ],
+            [
+              111.0,
+              -2.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R3_C0",
+        "row": 3,
+        "col": 0,
+        "longitude": 111.25,
+        "latitude": -1.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.5,
+              -2.0
+            ],
+            [
+              112.0,
+              -2.0
+            ],
+            [
+              112.0,
+              -1.5
+            ],
+            [
+              111.5,
+              -1.5
+            ],
+            [
+              111.5,
+              -2.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R3_C1",
+        "row": 3,
+        "col": 1,
+        "longitude": 111.75,
+        "latitude": -1.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.0,
+              -2.0
+            ],
+            [
+              112.5,
+              -2.0
+            ],
+            [
+              112.5,
+              -1.5
+            ],
+            [
+              112.0,
+              -1.5
+            ],
+            [
+              112.0,
+              -2.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R3_C2",
+        "row": 3,
+        "col": 2,
+        "longitude": 112.25,
+        "latitude": -1.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.5,
+              -2.0
+            ],
+            [
+              113.0,
+              -2.0
+            ],
+            [
+              113.0,
+              -1.5
+            ],
+            [
+              112.5,
+              -1.5
+            ],
+            [
+              112.5,
+              -2.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R3_C3",
+        "row": 3,
+        "col": 3,
+        "longitude": 112.75,
+        "latitude": -1.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.0,
+              -2.0
+            ],
+            [
+              113.5,
+              -2.0
+            ],
+            [
+              113.5,
+              -1.5
+            ],
+            [
+              113.0,
+              -1.5
+            ],
+            [
+              113.0,
+              -2.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R3_C4",
+        "row": 3,
+        "col": 4,
+        "longitude": 113.25,
+        "latitude": -1.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.5,
+              -2.0
+            ],
+            [
+              114.0,
+              -2.0
+            ],
+            [
+              114.0,
+              -1.5
+            ],
+            [
+              113.5,
+              -1.5
+            ],
+            [
+              113.5,
+              -2.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R3_C5",
+        "row": 3,
+        "col": 5,
+        "longitude": 113.75,
+        "latitude": -1.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.0,
+              -2.0
+            ],
+            [
+              114.5,
+              -2.0
+            ],
+            [
+              114.5,
+              -1.5
+            ],
+            [
+              114.0,
+              -1.5
+            ],
+            [
+              114.0,
+              -2.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R3_C6",
+        "row": 3,
+        "col": 6,
+        "longitude": 114.25,
+        "latitude": -1.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.5,
+              -2.0
+            ],
+            [
+              115.0,
+              -2.0
+            ],
+            [
+              115.0,
+              -1.5
+            ],
+            [
+              114.5,
+              -1.5
+            ],
+            [
+              114.5,
+              -2.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R3_C7",
+        "row": 3,
+        "col": 7,
+        "longitude": 114.75,
+        "latitude": -1.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.0,
+              -2.0
+            ],
+            [
+              115.5,
+              -2.0
+            ],
+            [
+              115.5,
+              -1.5
+            ],
+            [
+              115.0,
+              -1.5
+            ],
+            [
+              115.0,
+              -2.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R3_C8",
+        "row": 3,
+        "col": 8,
+        "longitude": 115.25,
+        "latitude": -1.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.0,
+              -1.5
+            ],
+            [
+              111.5,
+              -1.5
+            ],
+            [
+              111.5,
+              -1.0
+            ],
+            [
+              111.0,
+              -1.0
+            ],
+            [
+              111.0,
+              -1.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R4_C0",
+        "row": 4,
+        "col": 0,
+        "longitude": 111.25,
+        "latitude": -1.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.5,
+              -1.5
+            ],
+            [
+              112.0,
+              -1.5
+            ],
+            [
+              112.0,
+              -1.0
+            ],
+            [
+              111.5,
+              -1.0
+            ],
+            [
+              111.5,
+              -1.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R4_C1",
+        "row": 4,
+        "col": 1,
+        "longitude": 111.75,
+        "latitude": -1.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.0,
+              -1.5
+            ],
+            [
+              112.5,
+              -1.5
+            ],
+            [
+              112.5,
+              -1.0
+            ],
+            [
+              112.0,
+              -1.0
+            ],
+            [
+              112.0,
+              -1.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R4_C2",
+        "row": 4,
+        "col": 2,
+        "longitude": 112.25,
+        "latitude": -1.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.5,
+              -1.5
+            ],
+            [
+              113.0,
+              -1.5
+            ],
+            [
+              113.0,
+              -1.0
+            ],
+            [
+              112.5,
+              -1.0
+            ],
+            [
+              112.5,
+              -1.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R4_C3",
+        "row": 4,
+        "col": 3,
+        "longitude": 112.75,
+        "latitude": -1.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.0,
+              -1.5
+            ],
+            [
+              113.5,
+              -1.5
+            ],
+            [
+              113.5,
+              -1.0
+            ],
+            [
+              113.0,
+              -1.0
+            ],
+            [
+              113.0,
+              -1.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R4_C4",
+        "row": 4,
+        "col": 4,
+        "longitude": 113.25,
+        "latitude": -1.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.5,
+              -1.5
+            ],
+            [
+              114.0,
+              -1.5
+            ],
+            [
+              114.0,
+              -1.0
+            ],
+            [
+              113.5,
+              -1.0
+            ],
+            [
+              113.5,
+              -1.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R4_C5",
+        "row": 4,
+        "col": 5,
+        "longitude": 113.75,
+        "latitude": -1.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.0,
+              -1.5
+            ],
+            [
+              114.5,
+              -1.5
+            ],
+            [
+              114.5,
+              -1.0
+            ],
+            [
+              114.0,
+              -1.0
+            ],
+            [
+              114.0,
+              -1.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R4_C6",
+        "row": 4,
+        "col": 6,
+        "longitude": 114.25,
+        "latitude": -1.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.5,
+              -1.5
+            ],
+            [
+              115.0,
+              -1.5
+            ],
+            [
+              115.0,
+              -1.0
+            ],
+            [
+              114.5,
+              -1.0
+            ],
+            [
+              114.5,
+              -1.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R4_C7",
+        "row": 4,
+        "col": 7,
+        "longitude": 114.75,
+        "latitude": -1.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.0,
+              -1.5
+            ],
+            [
+              115.5,
+              -1.5
+            ],
+            [
+              115.5,
+              -1.0
+            ],
+            [
+              115.0,
+              -1.0
+            ],
+            [
+              115.0,
+              -1.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R4_C8",
+        "row": 4,
+        "col": 8,
+        "longitude": 115.25,
+        "latitude": -1.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.0,
+              -1.0
+            ],
+            [
+              111.5,
+              -1.0
+            ],
+            [
+              111.5,
+              -0.5
+            ],
+            [
+              111.0,
+              -0.5
+            ],
+            [
+              111.0,
+              -1.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R5_C0",
+        "row": 5,
+        "col": 0,
+        "longitude": 111.25,
+        "latitude": -0.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.5,
+              -1.0
+            ],
+            [
+              112.0,
+              -1.0
+            ],
+            [
+              112.0,
+              -0.5
+            ],
+            [
+              111.5,
+              -0.5
+            ],
+            [
+              111.5,
+              -1.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R5_C1",
+        "row": 5,
+        "col": 1,
+        "longitude": 111.75,
+        "latitude": -0.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.0,
+              -1.0
+            ],
+            [
+              112.5,
+              -1.0
+            ],
+            [
+              112.5,
+              -0.5
+            ],
+            [
+              112.0,
+              -0.5
+            ],
+            [
+              112.0,
+              -1.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R5_C2",
+        "row": 5,
+        "col": 2,
+        "longitude": 112.25,
+        "latitude": -0.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.5,
+              -1.0
+            ],
+            [
+              113.0,
+              -1.0
+            ],
+            [
+              113.0,
+              -0.5
+            ],
+            [
+              112.5,
+              -0.5
+            ],
+            [
+              112.5,
+              -1.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R5_C3",
+        "row": 5,
+        "col": 3,
+        "longitude": 112.75,
+        "latitude": -0.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.0,
+              -1.0
+            ],
+            [
+              113.5,
+              -1.0
+            ],
+            [
+              113.5,
+              -0.5
+            ],
+            [
+              113.0,
+              -0.5
+            ],
+            [
+              113.0,
+              -1.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R5_C4",
+        "row": 5,
+        "col": 4,
+        "longitude": 113.25,
+        "latitude": -0.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.5,
+              -1.0
+            ],
+            [
+              114.0,
+              -1.0
+            ],
+            [
+              114.0,
+              -0.5
+            ],
+            [
+              113.5,
+              -0.5
+            ],
+            [
+              113.5,
+              -1.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R5_C5",
+        "row": 5,
+        "col": 5,
+        "longitude": 113.75,
+        "latitude": -0.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.0,
+              -1.0
+            ],
+            [
+              114.5,
+              -1.0
+            ],
+            [
+              114.5,
+              -0.5
+            ],
+            [
+              114.0,
+              -0.5
+            ],
+            [
+              114.0,
+              -1.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R5_C6",
+        "row": 5,
+        "col": 6,
+        "longitude": 114.25,
+        "latitude": -0.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.5,
+              -1.0
+            ],
+            [
+              115.0,
+              -1.0
+            ],
+            [
+              115.0,
+              -0.5
+            ],
+            [
+              114.5,
+              -0.5
+            ],
+            [
+              114.5,
+              -1.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R5_C7",
+        "row": 5,
+        "col": 7,
+        "longitude": 114.75,
+        "latitude": -0.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.0,
+              -1.0
+            ],
+            [
+              115.5,
+              -1.0
+            ],
+            [
+              115.5,
+              -0.5
+            ],
+            [
+              115.0,
+              -0.5
+            ],
+            [
+              115.0,
+              -1.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R5_C8",
+        "row": 5,
+        "col": 8,
+        "longitude": 115.25,
+        "latitude": -0.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.0,
+              -0.5
+            ],
+            [
+              111.5,
+              -0.5
+            ],
+            [
+              111.5,
+              0.0
+            ],
+            [
+              111.0,
+              0.0
+            ],
+            [
+              111.0,
+              -0.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R6_C0",
+        "row": 6,
+        "col": 0,
+        "longitude": 111.25,
+        "latitude": -0.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.5,
+              -0.5
+            ],
+            [
+              112.0,
+              -0.5
+            ],
+            [
+              112.0,
+              0.0
+            ],
+            [
+              111.5,
+              0.0
+            ],
+            [
+              111.5,
+              -0.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R6_C1",
+        "row": 6,
+        "col": 1,
+        "longitude": 111.75,
+        "latitude": -0.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.0,
+              -0.5
+            ],
+            [
+              112.5,
+              -0.5
+            ],
+            [
+              112.5,
+              0.0
+            ],
+            [
+              112.0,
+              0.0
+            ],
+            [
+              112.0,
+              -0.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R6_C2",
+        "row": 6,
+        "col": 2,
+        "longitude": 112.25,
+        "latitude": -0.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.5,
+              -0.5
+            ],
+            [
+              113.0,
+              -0.5
+            ],
+            [
+              113.0,
+              0.0
+            ],
+            [
+              112.5,
+              0.0
+            ],
+            [
+              112.5,
+              -0.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R6_C3",
+        "row": 6,
+        "col": 3,
+        "longitude": 112.75,
+        "latitude": -0.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.0,
+              -0.5
+            ],
+            [
+              113.5,
+              -0.5
+            ],
+            [
+              113.5,
+              0.0
+            ],
+            [
+              113.0,
+              0.0
+            ],
+            [
+              113.0,
+              -0.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R6_C4",
+        "row": 6,
+        "col": 4,
+        "longitude": 113.25,
+        "latitude": -0.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.5,
+              -0.5
+            ],
+            [
+              114.0,
+              -0.5
+            ],
+            [
+              114.0,
+              0.0
+            ],
+            [
+              113.5,
+              0.0
+            ],
+            [
+              113.5,
+              -0.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R6_C5",
+        "row": 6,
+        "col": 5,
+        "longitude": 113.75,
+        "latitude": -0.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.0,
+              -0.5
+            ],
+            [
+              114.5,
+              -0.5
+            ],
+            [
+              114.5,
+              0.0
+            ],
+            [
+              114.0,
+              0.0
+            ],
+            [
+              114.0,
+              -0.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R6_C6",
+        "row": 6,
+        "col": 6,
+        "longitude": 114.25,
+        "latitude": -0.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.5,
+              -0.5
+            ],
+            [
+              115.0,
+              -0.5
+            ],
+            [
+              115.0,
+              0.0
+            ],
+            [
+              114.5,
+              0.0
+            ],
+            [
+              114.5,
+              -0.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R6_C7",
+        "row": 6,
+        "col": 7,
+        "longitude": 114.75,
+        "latitude": -0.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.0,
+              -0.5
+            ],
+            [
+              115.5,
+              -0.5
+            ],
+            [
+              115.5,
+              0.0
+            ],
+            [
+              115.0,
+              0.0
+            ],
+            [
+              115.0,
+              -0.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "R6_C8",
+        "row": 6,
+        "col": 8,
+        "longitude": 115.25,
+        "latitude": -0.25
+      }
+    }
+  ]
+}
