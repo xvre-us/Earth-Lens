@@ -268,11 +268,13 @@
 
     state.map.setView([-1.75, 113.25], 6);
 
+    // Esri dark gray basemap: no API key needed (the CARTO tiles now
+    // show "API KEY REQUIRED").
     L.tileLayer(
-      "https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png",
+      "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
       {
-        attribution: "&copy; OpenStreetMap &copy; CARTO",
-        maxZoom: 18
+        attribution: "Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors",
+        maxZoom: 16
       }
     ).addTo(state.map);
 
@@ -410,7 +412,7 @@
       value.textContent = Number.isFinite(trend?.slope_decade)
         ? `${trend.slope_decade < 0 ? "−" : "+"}${formatNumber(
             Math.abs(trend.slope_decade),
-            state.variable === "temp" ? 3 : 0
+            state.variable === "temp" || state.variable === "soil" ? 3 : 0
           )}`
         : "—";
     }
