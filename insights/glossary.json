@@ -1,0 +1,46 @@
+{
+  "trend": {
+    "en": "Estimated long-term direction and rate of change.",
+    "es": "Dirección y velocidad estimadas de cambio a largo plazo."
+  },
+  "anomaly": {
+    "en": "Departure from a reference value, here the same calendar-month mean.",
+    "es": "Diferencia respecto a una referencia, aquí el promedio del mismo mes calendario."
+  },
+  "p_value": {
+    "en": "Probability of a result at least as extreme under the null model and its assumptions; not the probability that the hypothesis is true.",
+    "es": "Probabilidad de un resultado al menos tan extremo bajo el modelo nulo y sus supuestos; no es la probabilidad de que la hipótesis sea cierta."
+  },
+  "q_value": {
+    "en": "Multiple-testing-adjusted p-value in this project.",
+    "es": "Valor p ajustado por comparaciones múltiples en este proyecto."
+  },
+  "confidence_interval": {
+    "en": "Range from a procedure with a stated long-run coverage under its assumptions.",
+    "es": "Intervalo de un procedimiento con cobertura a largo plazo declarada bajo sus supuestos."
+  },
+  "spearman": {
+    "en": "Rank-based association, not evidence of causation.",
+    "es": "Asociación entre rangos, no prueba de causalidad."
+  },
+  "coverage": {
+    "en": "Fraction of identified land with valid retrievals; not detection accuracy.",
+    "es": "Fracción de tierra identificada con observaciones válidas; no es exactitud de detección."
+  },
+  "HAC": {
+    "en": "Standard errors adjusted for heteroskedasticity and autocorrelation; approximate here.",
+    "es": "Errores estándar ajustados por heterocedasticidad y autocorrelación; aquí son aproximados."
+  },
+  "BH_BY": {
+    "en": "Multiple-testing procedures; BY is more conservative under arbitrary dependence.",
+    "es": "Procedimientos de pruebas múltiples; BY es más conservador bajo dependencia arbitraria."
+  },
+  "spatial_consistency": {
+    "en": "Descriptive agreement of slope signs with nearby cells; not independent confirmation.",
+    "es": "Coincidencia descriptiva del signo de pendientes vecinas; no es confirmación independiente."
+  },
+  "peat": {
+    "en": "Organic soil formed from accumulated plant material; drained peat can burn.",
+    "es": "Suelo orgánico formado por acumulación vegetal; la turba drenada puede arder."
+  }
+}
